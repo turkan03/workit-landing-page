@@ -24,3 +24,22 @@ header {
   background-color: var(--purple);
   padding: 3.5rem 10rem;
 }
+header .btn {
+  font-family: "Manrope", sans-serif;
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 180%;
+  text-decoration: none;
+  transition: color 300ms;
+}
+
+.btn:link,
+.btn:visited {
+  color: #fff;
+  border-bottom: solid 2px var(--green);
+}
+
+.btn:active,
+.btn:hover {
+  color: var(--green);
+}
