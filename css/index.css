@@ -1,0 +1,17 @@
+/* DESIGN SYSTEM */
+:root {
+  --green: rgb(68, 255, 161);
+  --purple: rgb(36, 5, 62);
+  --grey-purple: rgb(88, 77, 98);
+  --light-purple: rgb(253, 250, 255);
+}
+/* FONTS */
+@font-face {
+  font-family: "Fraunces";
+  src: url(/assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf)
+    format("TrueType");
+}
+@font-face {
+  font-family: "Manrope";
+  src: url(/assets/fonts/manrope/static/Manrope-Regular.ttf) format("TrueType");
+}
