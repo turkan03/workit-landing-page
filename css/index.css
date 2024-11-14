@@ -8,7 +8,7 @@
 /* FONTS */
 @font-face {
   font-family: "Fraunces";
-  src: url(/assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf)
+  src: url(/assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf)
     format("TrueType");
 }
 @font-face {
@@ -16,6 +16,21 @@
   src: url(/assets/fonts/manrope/static/Manrope-Regular.ttf) format("TrueType");
 }
 
+/* MAIN CSS STYLE */
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.btn,
+.link_btn {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 180%;
+  text-decoration: none;
+  cursor: pointer;
+}
 /* HEADER SECTION */
 header {
   display: flex;
@@ -24,12 +39,8 @@ header {
   background-color: var(--purple);
   padding: 3.5rem 10rem;
 }
+
 header .btn {
-  font-family: "Manrope", sans-serif;
-  font-weight: bold;
-  font-size: 1.125rem;
-  line-height: 180%;
-  text-decoration: none;
   transition: color 300ms;
 }
 
@@ -42,4 +53,98 @@ header .btn {
 .btn:active,
 .btn:hover {
   color: var(--green);
+}
+
+main {
+  position: relative;
+}
+
+main::after {
+  content: "";
+  display: block;
+  background-color: var(--purple);
+  width: 100%;
+  height: 200px;
+  clip-path: ellipse(57% 100px at center);
+  position: absolute;
+  bottom: -0%;
+  left: 50%;
+  transform: translate(-50%, 30%);
+  z-index: -1;
+}
+
+/* HERO SECTION */
+
+.hero {
+  background-color: var(--purple);
+  width: 100%;
+  height: 35rem;
+  position: relative;
+  border-bottom-left-radius: 15%;
+  border-bottom-right-radius: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero::before {
+  content: url(/assets/images/bg-pattern-1.svg);
+  position: absolute;
+  left: -101.71px;
+  top: 0;
+}
+
+.hero::after {
+  content: url(/assets/images/bg-pattern-2.svg);
+  position: absolute;
+  right: -47.49px;
+  top: 200px;
+}
+
+.hero_content {
+  max-width: 39.6875rem;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero h1 {
+  font-family: "Fraunces", sans-serif;
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 90px;
+  color: #fff;
+}
+
+.hero span {
+  text-decoration: underline var(--green);
+  text-decoration-thickness: 2px;
+  text-underline-position: under;
+}
+
+.link_btn {
+  padding: 12px 32px;
+  transition: all 300ms;
+}
+
+.link_btn:link,
+.link_btn:visited {
+  background-color: var(--green);
+  color: var(--purple);
+}
+
+.link_btn:active,
+.link_btn:hover {
+  background-color: var(--purple);
+  border: solid 2px var(--green);
+  color: var(--green);
+}
+.hero_img {
+  position: absolute;
+  bottom: -42%;
+  left: 50%;
+  transform: translateX(-50%);
 }
