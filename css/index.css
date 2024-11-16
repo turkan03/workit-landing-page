@@ -17,6 +17,13 @@
 }
 
 /* MAIN CSS STYLE */
+body {
+  position: relative;
+}
+
+main {
+  overflow-x: hidden;
+}
 .flex {
   display: flex;
   justify-content: center;
@@ -55,11 +62,7 @@ header .btn {
   color: var(--green);
 }
 
-main {
-  position: relative;
-}
-
-main::after {
+main::before {
   content: "";
   display: block;
   background-color: var(--purple);
@@ -67,7 +70,7 @@ main::after {
   height: 200px;
   clip-path: ellipse(57% 100px at center);
   position: absolute;
-  bottom: -0%;
+  bottom: 44.8%;
   left: 50%;
   transform: translate(-50%, 30%);
   z-index: -1;
@@ -99,6 +102,7 @@ main::after {
   position: absolute;
   right: -47.49px;
   top: 200px;
+  background-color: pink;
 }
 
 .hero_content {
@@ -144,7 +148,35 @@ main::after {
 }
 .hero_img {
   position: absolute;
-  bottom: -42%;
+  bottom: -40%;
   left: 50%;
   transform: translateX(-50%);
+}
+/* FEATURES SECTION */
+
+.features {
+  margin-top: 322px;
+  justify-content: space-evenly;
+}
+
+.features__content {
+  max-width: 22rem;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.features__content span {
+  display: inline-block;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: solid 1px var(--purple);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.features__content h2 {
+  margin-bottom: 1.75rem;
 }
